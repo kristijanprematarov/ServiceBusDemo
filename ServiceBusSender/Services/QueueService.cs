@@ -21,7 +21,7 @@ namespace ServiceBusSender.Services
 
         public async Task SendMessageAsync<T>(T serviceBusMessageData, string queueName)
         {
-            var serviceBusClient = new ServiceBusClient(_configuration.GetConnectionString("AzureServiceBus"));
+            var serviceBusClient = new ServiceBusClient(_configuration.GetConnectionString("AzureServiceBusQueue"));
 
             var sender = serviceBusClient.CreateSender(queueName);
 

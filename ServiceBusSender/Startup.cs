@@ -31,6 +31,7 @@ namespace ServiceBusSender
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddTransient<IQueueService, QueueService>();
+            services.AddTransient<ITopicService, TopicService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
